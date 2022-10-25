@@ -1,0 +1,41 @@
+{
+  "name": "SiteImage",
+  "fields": [
+    {
+      "fieldName": "numberImage",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "image3D",
+      "fieldType": "byte[]",
+      "fieldTypeBlobContent": "any"
+    },
+    {
+      "fieldName": "imagePreview",
+      "fieldType": "byte[]",
+      "fieldTypeBlobContent": "any"
+    },
+    {
+      "fieldName": "year",
+      "fieldType": "LocalDate"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "historicalSite",
+      "otherEntityRelationshipName": "siteImage",
+      "relationshipName": "historicalSite"
+    }
+  ],
+  "entityTableName": "site_image",
+  "dto": "mapstruct",
+  "pagination": "pagination",
+  "service": "serviceClass",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "applications": "*",
+  "changelogDate": "20210814183010"
+}

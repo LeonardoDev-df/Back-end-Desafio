@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.3.xsd">
+
+    <changeSet id="20210825004800-1-data" author="john" context="faker">
+        <loadData
+                  file="config/liquibase/fake-data/address.csv"
+                  separator=";"
+                  tableName="address">
+            <column name="id" type="numeric"/>
+            <column name="street_address" type="string"/>
+            <column name="zip_code" type="string"/>
+            <column name="number" type="string"/>
+            <column name="complement" type="string"/>
+            <column name="province" type="string"/>
+            <column name="city" type="string"/>
+            <column name="uf" type="string"/>
+            <column name="longitude" type="string"/>
+            <column name="latitude" type="string"/>
+            <column name="status" type="boolean"/>
+        </loadData>
+    </changeSet>
+</databaseChangeLog>

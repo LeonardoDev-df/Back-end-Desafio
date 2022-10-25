@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.3.xsd">
+    <!--
+        Added the constraints for entity HistoricalSite.
+    -->
+    <changeSet id="20210826172300-1" author="gabriel">
+
+        <addColumn tableName="site_image">
+            <column name="button_position_x" type="integer">
+                <constraints nullable="true"/>
+            </column>
+            <column name="button_position_y" type="integer">
+                <constraints nullable="true"/>
+            </column>
+            <column name="button_position_z" type="integer">
+                <constraints nullable="true"/>
+            </column>
+            <column name="button_color" type="varchar(255)">
+                <constraints nullable="true"/>
+            </column>
+        </addColumn>
+    </changeSet>
+</databaseChangeLog>

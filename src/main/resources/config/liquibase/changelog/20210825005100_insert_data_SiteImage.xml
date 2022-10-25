@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.3.xsd">
+
+    <changeSet id="20210825005100-1-data" author="john" context="faker">
+        <loadData
+                    file="config/liquibase/fake-data/site_image.csv"
+                    separator=";"
+                    tableName="site_image">
+            <column name="id" type="numeric"/>
+            <column name="number_image" type="numeric"/>
+            <column name="image_3d" type="blob"/>
+            <column name="image_preview" type="blob"/>
+            <column name="year" type="numeric"/>
+            <column name="historical_site_id" type="numeric"/>
+        </loadData>
+    </changeSet>
+</databaseChangeLog>

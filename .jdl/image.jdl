@@ -1,0 +1,20 @@
+entity ImageFile {
+    numberImage Integer
+    image3D Blob
+    imagePreview Blob
+}
+
+entity SiteImage {
+    numberImage Integer
+    image3D Blob
+    imagePreview Blob
+    year LocalDate
+}
+
+relationship OneToMany {
+	HistoricalSite to SiteImage{historicalSite}
+}
+
+paginate * with pagination
+dto * with mapstruct
+service * with serviceClass

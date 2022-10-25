@@ -1,0 +1,40 @@
+/**
+ * The Address entity.
+ * @author A true hipster
+ */
+entity Address {
+    streetAddress String
+    zipCode String
+    number String
+    complement String
+    province String
+    city String
+    uf String
+    longtitude String
+    latitude String
+    status Boolean
+}
+
+entity Quiz {
+    category String
+    title String
+}
+
+/**
+ * Many to One relationship.
+ */
+// relationship ManyToOne {}
+
+/**
+ * One to many relationship.
+ */
+// relationship OneToMany {}
+
+/**
+ * Many to many relationship.
+ */
+// relationship ManyToMany {}
+
+paginate * with pagination
+dto * with mapstruct
+service * with serviceClass
